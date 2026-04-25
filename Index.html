@@ -15,18 +15,17 @@ body{
   font-family:'Inter',sans-serif;
 }
 
-/* 🔥 FONDO LOCAL */
+/* 🔥 FONDO (tu archivo real) */
 body::before{
   content:"";
   position:fixed;
   width:100%;
   height:100%;
-  background:url('img/fondo.jpg') center/cover no-repeat;
+  background:url('Fondo.jpg') center/cover no-repeat;
   filter:brightness(0.3) blur(2px);
   z-index:-3;
 }
 
-/* grano */
 body::after{
   content:"";
   position:fixed;
@@ -45,15 +44,9 @@ body::after{
   transition:1s;
 }
 
-.fade{
-  opacity:0;
-  transform:scale(1.05);
-}
+.fade{opacity:0; transform:scale(1.05);}
 
-h1{
-  font-family:'Cormorant Garamond',serif;
-  font-size:70px;
-}
+h1{font-family:'Cormorant Garamond',serif; font-size:70px;}
 
 p{line-height:1.8; color:#cfc6bb;}
 .highlight{color:#d6a86b;}
@@ -69,18 +62,9 @@ p{line-height:1.8; color:#cfc6bb;}
 
 .hidden{display:none; margin-top:20px;}
 
-/* 📸 POLAROIDS */
-.polaroid{
-  position:absolute;
-  width:180px;
-  transform:rotate(var(--rot));
-}
+.polaroid{position:absolute; width:180px; transform:rotate(var(--rot));}
 
-.polaroid img{
-  width:100%;
-  border:6px solid #e5e5e5;
-  filter:grayscale(100%) contrast(1.2);
-}
+.polaroid img{width:100%; border:6px solid #e5e5e5; filter:grayscale(100%) contrast(1.2);}
 
 .tape{
   position:absolute;
@@ -101,7 +85,6 @@ p{line-height:1.8; color:#cfc6bb;}
 .p6{bottom:180px; right:80px; --rot:8deg;}
 .p7{bottom:120px; left:50%; transform:translateX(-50%) rotate(4deg);}
 
-/* 🎧 PLAYER */
 .player{
   position:fixed;
   bottom:10px;
@@ -117,12 +100,11 @@ p{line-height:1.8; color:#cfc6bb;}
   justify-content:space-between;
 }
 
-/* 🖼️ PORTADA (p8) */
 .cover{
   width:55px;
   height:55px;
   border-radius:8px;
-  background:url('img/p8.jpg') center/cover;
+  background:url('p8.jpg') center/cover;
 }
 
 .controls{display:flex; align-items:center; gap:15px;}
@@ -147,7 +129,8 @@ p{line-height:1.8; color:#cfc6bb;}
 <body>
 
 <audio id="audio">
-<source src="audio/song.mp3" type="audio/mpeg"></audio>
+<source src="song.mp3" type="audio/mpeg">
+</audio>
 
 <div class="container" id="main">
   <h1>Para ti</h1>
@@ -164,14 +147,14 @@ p{line-height:1.8; color:#cfc6bb;}
   <p id="extra" class="hidden"></p>
 </div>
 
-<!-- 📸 IMÁGENES LOCALES p1 → p7 -->
-<div class="polaroid p1"><div class="tape"></div><img src="img/p1.jpg"></div>
-<div class="polaroid p2"><div class="tape"></div><img src="img/p2.jpg"></div>
-<div class="polaroid p3"><div class="tape"></div><img src="img/p3.jpg"></div>
-<div class="polaroid p4"><div class="tape"></div><img src="img/p4.jpg"></div>
-<div class="polaroid p5"><div class="tape"></div><img src="img/p5.jpg"></div>
-<div class="polaroid p6"><div class="tape"></div><img src="img/p6.jpg"></div>
-<div class="polaroid p7"><div class="tape"></div><img src="img/p7.jpg"></div>
+<!-- 📸 OJO: tus archivos están en raíz -->
+<div class="polaroid p1"><div class="tape"></div><img src="p1.jpg"></div>
+<div class="polaroid p2"><div class="tape"></div><img src="p2.jpg"></div>
+<div class="polaroid p3"><div class="tape"></div><img src="p3.jpeg"></div>
+<div class="polaroid p4"><div class="tape"></div><img src="p4.jpg"></div>
+<div class="polaroid p5"><div class="tape"></div><img src="p5.jpg"></div>
+<div class="polaroid p6"><div class="tape"></div><img src="p6.jpg"></div>
+<div class="polaroid p7"><div class="tape"></div><img src="p7.jpg"></div>
 
 <div class="player">
   <div style="display:flex;align-items:center;gap:10px;">
