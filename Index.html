@@ -15,16 +15,18 @@ body{
   font-family:'Inter',sans-serif;
 }
 
+/* 🔥 FONDO LOCAL */
 body::before{
   content:"";
   position:fixed;
   width:100%;
   height:100%;
-  background:url('https://images.unsplash.com/photo-1611078489935-0cb964de46d6') center/cover;
-  filter:brightness(0.25) blur(3px);
+  background:url('img/fondo.jpg') center/cover no-repeat;
+  filter:brightness(0.3) blur(2px);
   z-index:-3;
 }
 
+/* grano */
 body::after{
   content:"";
   position:fixed;
@@ -67,6 +69,7 @@ p{line-height:1.8; color:#cfc6bb;}
 
 .hidden{display:none; margin-top:20px;}
 
+/* 📸 POLAROIDS */
 .polaroid{
   position:absolute;
   width:180px;
@@ -98,6 +101,7 @@ p{line-height:1.8; color:#cfc6bb;}
 .p6{bottom:180px; right:80px; --rot:8deg;}
 .p7{bottom:120px; left:50%; transform:translateX(-50%) rotate(4deg);}
 
+/* 🎧 PLAYER */
 .player{
   position:fixed;
   bottom:10px;
@@ -113,11 +117,12 @@ p{line-height:1.8; color:#cfc6bb;}
   justify-content:space-between;
 }
 
+/* 🖼️ PORTADA (p8) */
 .cover{
   width:55px;
   height:55px;
   border-radius:8px;
-  background:url('https://images.unsplash.com/photo-1519681393784-d120267933ba') center/cover;
+  background:url('img/p8.jpg') center/cover;
 }
 
 .controls{display:flex; align-items:center; gap:15px;}
@@ -160,13 +165,14 @@ p{line-height:1.8; color:#cfc6bb;}
   <p id="extra" class="hidden"></p>
 </div>
 
-<div class="polaroid p1"><div class="tape"></div><img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7"></div>
-<div class="polaroid p2"><div class="tape"></div><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba"></div>
-<div class="polaroid p3"><div class="tape"></div><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"></div>
-<div class="polaroid p4"><div class="tape"></div><img src="https://images.unsplash.com/photo-1520975922284-8b456906c813"></div>
-<div class="polaroid p5"><div class="tape"></div><img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e"></div>
-<div class="polaroid p6"><div class="tape"></div><img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92"></div>
-<div class="polaroid p7"><div class="tape"></div><img src="https://images.unsplash.com/photo-1604908176997-431c8e5cb918"></div>
+<!-- 📸 IMÁGENES LOCALES p1 → p7 -->
+<div class="polaroid p1"><div class="tape"></div><img src="img/p1.jpg"></div>
+<div class="polaroid p2"><div class="tape"></div><img src="img/p2.jpg"></div>
+<div class="polaroid p3"><div class="tape"></div><img src="img/p3.jpg"></div>
+<div class="polaroid p4"><div class="tape"></div><img src="img/p4.jpg"></div>
+<div class="polaroid p5"><div class="tape"></div><img src="img/p5.jpg"></div>
+<div class="polaroid p6"><div class="tape"></div><img src="img/p6.jpg"></div>
+<div class="polaroid p7"><div class="tape"></div><img src="img/p7.jpg"></div>
 
 <div class="player">
   <div style="display:flex;align-items:center;gap:10px;">
