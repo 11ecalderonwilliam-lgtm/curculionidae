@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para ti 🖤</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      color: #eaeaea;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 600px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.1em;
+    }
+
+    .highlight {
+      color: #c084fc;
+      font-weight: bold;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background: #c084fc;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1em;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #a855f7;
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 20px;
+      font-style: italic;
+      color: #bbb;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Para ti ✨</h1>
+    <p>
+      Sé que estos días estás llena de parciales, trabajos y mil cosas más…
+      pero quiero que recuerdes algo:
+    </p>
+
+    <p class="highlight">
+      vas a lograrlo.
+    </p>
+
+    <p>
+      No porque todo sea fácil, sino porque tú eres de las personas que incluso cuando todo pesa,
+      siguen adelante.
+    </p>
+
+    <p>
+      Entre códigos, leyes, fotos, caballos, insectos raros (sí, esos curculionidae 🐞)
+      y canciones de Depresión Sonora… hay algo que no cambia:
+      tu forma de hacer las cosas con intención.
+    </p>
+
+    <button class="btn" onclick="mostrarMensaje()">Haz clic aquí</button>
+
+    <p id="mensaje" class="hidden">
+      Confío en ti. Y cuando todo esto pase,
+      mínimo te debo un brownie o una mantecada bien ganada 🖤
+    </p>
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById('mensaje').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
