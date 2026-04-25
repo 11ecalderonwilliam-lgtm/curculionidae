@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para ti 🖤</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #eaeaea;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      background: black;
+    }
+
+    /* 🎥 Fondo con imagen aesthetic */
+    .bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover;
+      filter: brightness(0.3) blur(3px);
+      z-index: 0;
+    }
+
+    /* 🌌 overlay con textura */
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(0,0,0,0.2), rgba(0,0,0,0.9));
+      z-index: 1;
+    }
+
+    /* 🪲 Iconos flotando */
+    .floating {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .floating span {
+      position: absolute;
+      font-size: 20px;
+      opacity: 0.6;
+      animation: float 10s infinite linear;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
+      50% { opacity: 0.7; }
+      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+
+    .card {
+      position: relative;
+      background: rgba(0,0,0,0.6);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 650px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      z-index: 2;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.7em;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 1.1em;
+    }
+
+    .highlight {
+      color: #c084fc;
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background: #c084fc;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1em;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #a855f7;
+      transform: scale(1.08);
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 20px;
+      font-style: italic;
+      color: #bbb;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg"></div>
+  <div class="overlay"></div>
+
+  <!-- 🪲 Elementos aesthetic flotando -->
+  <div class="floating" id="floating"></div>
+
+  <!-- 🎵 Música -->
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/3d9k6l.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card">
+    <h1>Para ti ✨</h1>
+
+    <p>
+      Sé que estos días pesan.
+      Que hay parciales, lecturas infinitas y todo se siente encima.
+    </p>
+
+    <p class="highlight">
+      pero tú puedes con esto.
+    </p>
+
+    <p>
+      Porque incluso entre códigos, fotos, insectos raros y canciones que dicen mucho sin decir todo…
+      sigues siendo tú.
+    </p>
+
+    <button class="btn" onclick="mostrarMensaje()">Haz clic aquí</button>
+
+    <p id="mensaje" class="hidden">
+      Confío en ti.
+      Y cuando pase todo esto,
+      te debo un brownie, una mantecada
+      y una tarde tranquila 🖤
+    </p>
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById('mensaje').style.display = 'block';
+    }
+
+    // Elementos flotantes (🪲 📷 🐎)
+    const items = ['🪲','📷','🐎','✨'];
+    const container = document.getElementById('floating');
+
+    for (let i = 0; i < 25; i++) {
+      const el = document.createElement('span');
+      el.innerHTML = items[Math.floor(Math.random()*items.length)];
+      el.style.left = Math.random()*100 + '%';
+      el.style.animationDuration = (6 + Math.random()*6) + 's';
+      el.style.fontSize = (15 + Math.random()*20) + 'px';
+      container.appendChild(el);
+    }
+  </script>
+
+</body>
+</html>
