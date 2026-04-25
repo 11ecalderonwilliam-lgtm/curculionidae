@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curculionidae 🖤</title>
+<title>Para ti 🖤</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
@@ -40,7 +40,7 @@ body::after{
   text-align:center;
   max-width:700px;
   margin:auto;
-  padding:60px 20px 120px;
+  padding:40px 20px 120px; /* menos espacio arriba para subir el contenido */ /* más arriba para que no tenga que hacer scroll */
   transition:1s;
 }
 
@@ -58,6 +58,9 @@ p{line-height:1.8; color:#cfc6bb;}
   background:transparent;
   color:#c7a97f;
   cursor:pointer;
+  font-family:'Cormorant Garamond',serif;
+  letter-spacing:1px;
+  direction:ltr; /* asegura que el texto no se invierta */
 }
 
 .hidden{display:none; margin-top:20px;}
@@ -136,11 +139,13 @@ p{line-height:1.8; color:#cfc6bb;}
   <h1>Para ti</h1>
 
   <p>
-Sé que estos días vienen pesados.<br>
-Parciales, pendientes, mil cosas en la cabeza.<br><br>
-Pero también sé que eres de esas personas<br>
-que no se rinden, que se esfuerzan en silencio,<br>
-que incluso cuando todo parece mucho, sigues adelante.<br><br>
+Sé que estos días vienen pesados,<br>
+con parciales y mil cosas en la cabeza.<br><br>
+Pero sé que eres de esas personas
+que no se rinden y siguen adelante,<br>
+aun cuando todo se siente mucho.<br><br>
+Confío en ti, en todo lo que eres<br>
+y en lo que puedes lograr.
 </p>
 
   <p class="highlight">Confío en ti.</p>
@@ -191,7 +196,13 @@ audio.ontimeupdate = ()=>{
 }
 
 function revelar(){
-  const text = "No es solo que confíe en ti... es que me atraes un poquito más de lo que debería 🖤";
+  const text = `Y aun así… entre todo eso,
+logras cosas que muchos ni siquiera intentarían.
+
+No es casualidad.
+Eres tú.
+
+Y sí… también me atraes un poquito más de lo que debería 🖤`;
   const extra = document.getElementById('extra');
   const btn = document.getElementById('mainBtn');
 
@@ -213,7 +224,7 @@ function revelar(){
 
   setTimeout(()=>{
     document.getElementById('main').classList.add('fade');
-  }, 7000);
+  }, 15000);
 }
 </script>
 
